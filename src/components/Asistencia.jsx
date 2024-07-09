@@ -76,11 +76,8 @@ function Asistencia({ jovenes, adultos, invitado }) {
 
             {confirmacion === 0 && (
                 <>
-                    {jovenes > 0 && (
-                        <p className='font-sukar text-2xl font-bold text-secondary'>{jovenes} JÓVEN(ES)</p>
-                    )}
                     {adultos > 0 && (
-                        <p className='font-sukar text-2xl font-bold text-secondary'>{adultos} ADULTO(S)</p>
+                        <p className='font-sukar text-2xl font-bold text-secondary'>VÁLIDO PARA {adultos} INVITADO(S)</p>
                     )}
                     <button onClick={() => handleAsistenciaClick('SI')} className='bg-primary w-4/5 px-2 py-4 rounded-lg font-sukar text-white text-xl'>SÍ, ASISTIRÉ</button>
                     <button onClick={() => handleAsistenciaClick('NO')} className='border-2 w-4/5 px-2 py-4 rounded-lg font-sukar text-white text-xl'>NO PODRÉ ASISTIR</button>

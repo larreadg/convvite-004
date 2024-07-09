@@ -2,7 +2,6 @@ import { useLocation } from 'react-router-dom'
 import Asistencia from './components/Asistencia'
 import HoraLugar from './components/HoraLugar'
 import Mensaje from './components/Mensaje'
-import NoNinhos from './components/NoNinhos'
 import Portada from './components/Portada'
 import Regalo from './components/Regalo'
 import Tenida from './components/Tenida'
@@ -30,9 +29,10 @@ function App() {
       <Mensaje/>
       <HoraLugar/>
       <Tenida/>
-      <NoNinhos/>
       <Regalo/>
-      <Asistencia invitado={jsonData.i} adultos={jsonData.a} jovenes={jsonData.j}/>
+      {jsonData.i !== '' &&
+        <Asistencia invitado={jsonData.i} adultos={jsonData.a} jovenes={jsonData.j}/>
+      }
     </>
   )
 }
