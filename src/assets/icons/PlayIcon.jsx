@@ -9,6 +9,6 @@ function PlayIcon({ color = '#fff' }){
 }
 
 PlayIcon.propTypes = {
-    color: PropTypes.string.isRequired,
+    color: PropTypes.string,
 }
 export default PlayIcon
